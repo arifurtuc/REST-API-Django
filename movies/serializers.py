@@ -8,4 +8,4 @@ class MovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = MovieData
         # Specify the fields to be included in the serialized representation
-        fields = ['id', 'name', 'duration', 'rating']
+        fields = ['id', 'name', 'duration', 'rating', 'movie_type']
