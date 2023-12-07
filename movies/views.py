@@ -10,3 +10,12 @@ class MovieViewsSet(viewsets.ModelViewSet):
 
     # Specify the serializer class to be used
     serializer_class = MovieSerializer
+
+
+# Define a ViewSet for specific MovieData objects based on movie type
+class ActionMovieViewsSet(viewsets.ModelViewSet):
+    # Define the queryset to retrieve MovieData for specific type
+    queryset = MovieData.objects.filter(movie_type='action')
+
+    # Specify the serializer class to be used
+    serializer_class = MovieSerializer
